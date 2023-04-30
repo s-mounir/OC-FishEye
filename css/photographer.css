@@ -11,6 +11,19 @@
     background-color: rgba(229, 229, 229, 0.4);
 }
 
+#lightBox {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 50px;
+    overflow: auto;
+    background-color: #FFF;
+}
+
 .photograph-header {
     background-color: #FAFAFA;
     height: 300px;
@@ -192,4 +205,35 @@ form textarea {
     border: none;
     border-radius: 5px;
     font-size: 28px;
+}
+
+.imageCloseUp {
+    width: 80%;
+    height: 80%;
+    padding: 30px;
+    margin: auto;
+    background-color: #DB8876;
+    position: relative;
+}
+
+.imageCloseUp i {
+    cursor: pointer;
+    position: absolute;
+    color: #901C1C;
+    font-size: 42px;
+}
+
+.imageCloseUp #lightBoxCloseBtn {
+    top: 40px;
+    right: 40px;
+}
+
+.imageCloseUp #chevronLeft {
+    top: calc(50% - 21px);
+    left: 30px;
+}
+
+.imageCloseUp #chevronRight {
+    top: calc(50% - 21px);
+    right: 30px;
 }
