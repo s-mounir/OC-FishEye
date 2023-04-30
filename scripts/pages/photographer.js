@@ -38,6 +38,12 @@ async function init () {
   const mediaPhotographer = media.filter(({ photographerId }) => photographerId == idPhotograph)
   mediaPhotographer.forEach((media) => {
     const mediaModel = mediaFactory(photographerModel.name, media)
+    const carousel = document.getElementById('carousel')
+    const listDOM = mediaModel.getCarouselItem()
+    carousel.appendChild(listDOM)
+  })
+  mediaPhotographer.forEach((media) => {
+    const mediaModel = mediaFactory(photographerModel.name, media)
     const mediaCardDOM = mediaModel.getMediaCardDOM()
     mediaSection.appendChild(mediaCardDOM)
   })
@@ -45,11 +51,40 @@ async function init () {
 
 init()
 
+// Close lightBox
+const lightBoxCloseBtn = document.getElementById('lightBoxCloseBtn')
+lightBoxCloseBtn.addEventListener('click', closeLightBox)
+
+// Next element in carousel
+const chevronRight = document.getElementById('chevronRight')
+chevronRight.addEventListener('click', nextItem)
+
+document.addEventListener('keydown', e => {
+  const lightBox = document.getElementById('lightBox')
+  if (lightBox.ariaHidden === 'false' && e.key === 'ArrowRight') {
+    nextItem()
+  }
+})
+
+// Previous element in carousel
+const chevronLeft = document.getElementById('chevronLeft')
+chevronLeft.addEventListener('click', previousItem)
+
+document.addEventListener('keydown', e => {
+  const lightBox = document.getElementById('lightBox')
+  if (lightBox.ariaHidden === 'false' && e.key === 'ArrowLeft') {
+    previousItem()
+  }
+})
+
 // Close modal when escape key is pressed
 document.addEventListener('keydown', e => {
   const modal = document.getElementById('contact_modal')
+  const lightBox = document.getElementById('lightBox')
   if (modal.ariaHidden === 'false' && e.key === 'Escape') {
     closeModal()
+  }else if (lightBox.ariaHidden === 'false' && e.key === 'Escape') {
+    closeLightBox()
   }
 })
 

@@ -97,9 +97,6 @@
 }
 
 .mediaSection h3{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     font-size: 24px;
     width: 85%;
     margin: 15px 0;
@@ -236,4 +233,17 @@ form textarea {
 .imageCloseUp #chevronRight {
     top: calc(50% - 21px);
     right: 30px;
+}
+
+#carousel, 
+#carousel li{
+    height: 100%;
+}
+
+.currentItem img,
+.currentItem video
+{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
 }
