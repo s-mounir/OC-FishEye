@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
@@ -10,7 +10,7 @@
   </head>
   <body>
     <header>
-      <img src="assets/images/logo.png" class="logo" />
+      <img src="assets/images/logo.png" class="logo" alt="logo"/>
     </header>
     <main id="main" aria-hidden="false">
       <div class="photograph-header">
@@ -21,7 +21,7 @@
 			<div class="modal" role="dialog">
 				<header>
           <h2 id="modalHeader">Contactez-moi</h2>
-          <img id="modalCloseBtn" src="assets/icons/close.svg" onclick="closeModal()" />
+          <img id="modalCloseBtn" src="assets/icons/close.svg" onclick="closeModal()"  alt="modal close button"/>
         </header>
 				<form>
 					<div>
@@ -40,9 +40,9 @@
 		</div>
     <div id="lightBox" aria-hidden="true">
       <div class="imageCloseUp" aria-label="image closeup view">
-        <i id="lightBoxCloseBtn" class="fa-sharp fa-solid fa-xmark"></i>
-        <i id="chevronLeft" class="fa-solid fa-chevron-left"></i>
-        <i id="chevronRight" class="fa-solid fa-chevron-right"></i>
+        <i id="lightBoxCloseBtn" class="fa-sharp fa-solid fa-xmark" aria-label="lightBox close button"></i>
+        <i id="chevronLeft" class="fa-solid fa-chevron-left" aria-label="lightBox previous media"></i>
+        <i id="chevronRight" class="fa-solid fa-chevron-right" aria-label="lightBox next media"></i>
       </div>
     </div>
     <script src="scripts/factories/media.js"></script>
