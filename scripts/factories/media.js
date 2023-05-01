@@ -32,10 +32,11 @@ function mediaFactory (name, data) {
     const h3 = document.createElement('h3')
     h3.textContent = title
     const p1 = document.createElement('p')
-    p1.innerHTML = likes + '<i class="fa-solid fa-heart"></i>'
+    p1.innerHTML = likes + '<i class="fa-regular fa-heart"></i>'
+    p1.addEventListener('click', () => getLikes(id))
     articleText.append(h3, p1)
     article.append(elemMedia, articleText)
-    article.addEventListener('click', () => displayLightBox(id))
+    elemMedia.addEventListener('click', () => displayLightBox(id))
     return (article)
   }
 
@@ -54,5 +55,5 @@ function mediaFactory (name, data) {
     return (list)
   }
 
-  return { getMediaCardDOM, getCarouselItem }
+  return { getMediaCardDOM, getCarouselItem, likes }
 }

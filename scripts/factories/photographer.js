@@ -40,5 +40,5 @@ function photographerFactory (data) {
     header.append(img)
   }
 
-  return { name, picture, getUserCardDOM, getPhotographerHeader }
+  return { name, picture, price, getUserCardDOM, getPhotographerHeader }
 }

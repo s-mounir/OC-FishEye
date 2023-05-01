@@ -1,5 +1,4 @@
 function displayLightBox (id) {
-  console.log('coucou')
   const lightBox = document.getElementById('lightBox')
   const body = document.getElementById('main')
   const lightBoxCloseBtn = document.getElementById('lightBoxCloseBtn')
