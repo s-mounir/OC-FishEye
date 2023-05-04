@@ -36,19 +36,19 @@
 
 .photograph-header div h1{
     color: #D3573C;
-    font-size: 64px;
+    font-size: 4rem;
     margin: 0;
 }
 
 .photograph-header div h2{
     color: #901C1C;
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-top: 0;
 }
 
 .photograph-header div p{
     color: #525252;
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 .photograph-header img{
@@ -63,13 +63,13 @@
 }
 
 .mainSection .filterTxt{
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: bold;
     display: inline-block;
 }
 
 .mainSection button{
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
     color: white;
     padding: 11px;
@@ -97,7 +97,7 @@
 }
 
 .mediaSection h3{
-    font-size: 24px;
+    font-size: 1.5rem;
     width: 85%;
     margin: 15px 0;
     padding-right: 10px;
@@ -106,7 +106,7 @@
 .mediaSection p{
     white-space: nowrap;
     margin: 15px 0;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .mediaSection article{
@@ -128,7 +128,7 @@
 }
 
 .contact_button {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
     color: white;
     padding: 11px;
@@ -167,7 +167,7 @@
 }
 
 .modal header h2 {
-    font-size: 64px;
+    font-size: 4rem;
     font-weight: normal;
     margin: 0;
 }
@@ -181,7 +181,7 @@ form {
 
 form label {
     color: #312E2E;
-    font-size: 36px;
+    font-size: 2.25rem;
 }
 
 form div {
@@ -197,7 +197,7 @@ form input {
     height: 68px;
     border: none;
     border-radius: 5px;
-    font-size: 28px;
+    font-size: 1.75rem;
 }
 
 form textarea {
@@ -205,7 +205,7 @@ form textarea {
     height: 170px;
     border: none;
     border-radius: 5px;
-    font-size: 28px;
+    font-size: 1.75rem;
 }
 
 .imageCloseUp {
@@ -219,7 +219,7 @@ form textarea {
     cursor: pointer;
     position: absolute;
     color: #901C1C;
-    font-size: 42px;
+    font-size: 2.6rem;
 }
 
 .imageCloseUp #lightBoxCloseBtn {
@@ -258,7 +258,7 @@ form textarea {
 
 .currentItem h3{
     color: #901C1C;
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-top: 0;
 }
 
@@ -275,5 +275,5 @@ form textarea {
     justify-content: space-between;
     align-items: center;
     padding: 0 30px;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
