@@ -13,8 +13,8 @@ const idPhotograph = params.get('id')
 
 async function init () {
   // Récupère les datas des photographes
-  const { photographers, media } = await getPhotographers()
-  const photographerData = photographers.filter(({ id }) => id == idPhotograph)
+  const { photographers } = await getPhotographers()
+  const photographerData = photographers.filter(({ id }) => id === Number(idPhotograph))
   const photographer = photographerData[0]
   const photographerModel = photographerFactory(photographer)
   photographerModel.getPhotographerHeader()
@@ -74,7 +74,7 @@ document.addEventListener('keydown', e => {
   const lightBox = document.getElementById('lightBox')
   if (modal.ariaHidden === 'false' && e.key === 'Escape') {
     closeModal()
-  }else if (lightBox.ariaHidden === 'false' && e.key === 'Escape') {
+  } else if (lightBox.ariaHidden === 'false' && e.key === 'Escape') {
     closeLightBox()
   }
 })

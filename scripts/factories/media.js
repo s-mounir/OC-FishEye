@@ -31,6 +31,7 @@ function mediaFactory (name, data) {
     articleText.classList.add('articleText')
     const h3 = document.createElement('h3')
     h3.textContent = title
+    h3.setAttribute('lang', 'en')
     const p1 = document.createElement('p')
     p1.innerHTML = likes + '<i class="fa-regular fa-heart"></i>'
     p1.addEventListener('click', () => getLikes(id))
@@ -50,6 +51,7 @@ function mediaFactory (name, data) {
     const elemMedia = getMediaDOM()
     const h3 = document.createElement('h3')
     h3.textContent = title
+    h3.setAttribute('lang', 'en')
     list.append(elemMedia, h3)
 
     return (list)

@@ -39,7 +39,7 @@ async function sort (sortParam) {
   } else if (sortParam === 'Date') {
     mediaPhotographer.sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
   } else if (sortParam === 'Titre') {
-    mediaPhotographer.sort((a, b) => (a.title > b.title) ? 1 : ((b.title > a.title) ? -1 : 0))
+    mediaPhotographer.sort((a, b) => (a.title.toLowerCase() > b.title.toLowerCase()) ? 1 : ((b.title.toLowerCase() > a.title.toLowerCase()) ? -1 : 0))
   }
   mediaPhotographer.forEach((media) => {
     const mediaModel = mediaFactory(photographerModel.name, media)

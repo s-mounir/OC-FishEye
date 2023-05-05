@@ -13,6 +13,7 @@ function photographerFactory (data) {
     h2.textContent = name
     const h3 = document.createElement('h3')
     h3.textContent = city + ', ' + country
+    h3.setAttribute('lang', 'en')
     const p1 = document.createElement('p')
     p1.textContent = tagline
     const p2 = document.createElement('p')
@@ -30,6 +31,7 @@ function photographerFactory (data) {
     h1.textContent = name
     const h2 = document.createElement('h2')
     h2.textContent = city + ', ' + country
+    h2.setAttribute('lang', 'en')
     const p1 = document.createElement('p')
     const img = document.createElement('img')
     img.setAttribute('src', picture)
