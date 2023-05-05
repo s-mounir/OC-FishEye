@@ -12,7 +12,6 @@ const params = (new URL(document.location)).searchParams
 const idPhotograph = params.get('id')
 
 async function init () {
-  let totalLikes = 0
   // Récupère les datas des photographes
   const { photographers, media } = await getPhotographers()
   const photographerData = photographers.filter(({ id }) => id == idPhotograph)
@@ -33,32 +32,12 @@ async function init () {
   filter.classList.add('filterTxt')
   const btn = document.createElement('button')
   btn.innerHTML = 'Popularité <i class="fa-solid fa-chevron-down"></i>'
-  mainSection.append(filter, btn, mediaSection)
+  btn.id = 'filterBtn'
+  btn.addEventListener('click', dropdown)
+  mainSection.append(filter, btn)
   main.append(mainSection)
 
-  const mediaPhotographer = media.filter(({ photographerId }) => photographerId == idPhotograph)
-  mediaPhotographer.forEach((media) => {
-    const mediaModel = mediaFactory(photographerModel.name, media)
-    const carousel = document.getElementById('carousel')
-    const listDOM = mediaModel.getCarouselItem()
-    carousel.appendChild(listDOM)
-    totalLikes += mediaModel.likes
-  })
-
-  const likesDiv = document.getElementById('totalLikes')
-  const pLikes = document.createElement('p')
-  pLikes.id = 'pLikes'
-  pLikes.innerHTML = totalLikes + ' <i class="fa-solid fa-heart"></i>'
-  const pPrice = document.createElement('p')
-  pLikes.id = 'pPrice'
-  pPrice.textContent = photographerModel.price + '€ / jour'
-  likesDiv.append(pLikes, pPrice)
-
-  mediaPhotographer.forEach((media) => {
-    const mediaModel = mediaFactory(photographerModel.name, media)
-    const mediaCardDOM = mediaModel.getMediaCardDOM()
-    mediaSection.appendChild(mediaCardDOM)
-  })
+  sort('Popularité')
 };
 
 init()

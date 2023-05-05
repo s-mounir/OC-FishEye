@@ -60,19 +60,22 @@
 
 .mainSection{
     margin: 0 100px;
+    position: relative;
 }
 
 .mainSection .filterTxt{
     font-size: 1rem;
     font-weight: bold;
     display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 10px;
 }
 
 .mainSection button{
     font-size: 1.25rem;
-    font-weight: bold;
     color: white;
-    padding: 11px;
+    padding: 10px;
     width: 170px;
     height: 70px;
     border: none;
@@ -80,7 +83,17 @@
     border-radius: 5px;
     cursor: pointer;
     display: inline-block;
-    margin: 20px 30px;
+    position: absolute;
+    top: 10px;
+    left: 90px;
+    text-align: left;
+    font-family: "DM Sans", sans-serif;
+    padding-left: 20px;
+}
+
+.mainSection button i{
+    position: absolute;
+    right: 20px;
 }
 
 .mediaSection{
@@ -89,6 +102,8 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     color: #901C1C;
+    position: absolute;
+    top: 100px;
 }
 
 .mediaSection .articleText{
@@ -276,4 +291,42 @@ form textarea {
     align-items: center;
     padding: 0 30px;
     font-size: 1.5rem;
+    z-index: 5;
+}
+
+#dropdown{
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    width: 170px;
+    border: none;
+    background-color: #901C1C;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 90px;
+    list-style: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#dropdown li{
+    border-bottom: 1px solid white;
+    margin: 0 10px;
+    padding: 10px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-family: "DM Sans", sans-serif;
+    padding-top: 12px;
+}
+
+#dropdown li:last-child{
+    border-bottom: none;
+}
+
+#dropdown li i{
+    position: absolute;
+    right: 20px;
 }
