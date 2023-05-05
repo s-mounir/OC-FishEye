@@ -33,7 +33,7 @@ function mediaFactory (name, data) {
     h3.textContent = title
     h3.setAttribute('lang', 'en')
     const p1 = document.createElement('p')
-    p1.innerHTML = likes + '<i class="fa-regular fa-heart"></i>'
+    p1.innerHTML = likes + ' <i class="fa-regular fa-heart"></i>'
     p1.addEventListener('click', () => getLikes(id))
     articleText.append(h3, p1)
     article.append(elemMedia, articleText)

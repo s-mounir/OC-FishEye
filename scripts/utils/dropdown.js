@@ -21,6 +21,7 @@ async function sort (sortParam) {
   const oldMediaSection = document.querySelector('.mediaSection')
   const oldPLikes = document.getElementById('pLikes')
   const oldPPrice = document.getElementById('pPrice')
+  const carousel = document.getElementById('carousel')
   if (oldMediaSection) {
     oldMediaSection.remove()
   }
@@ -30,6 +31,7 @@ async function sort (sortParam) {
   if (oldPPrice) {
     oldPPrice.remove()
   }
+  carousel.innerHTML = ''
   const newMediaSection = document.createElement('div')
   newMediaSection.classList.add('mediaSection')
 
@@ -43,7 +45,6 @@ async function sort (sortParam) {
   }
   mediaPhotographer.forEach((media) => {
     const mediaModel = mediaFactory(photographerModel.name, media)
-    const carousel = document.getElementById('carousel')
     const listDOM = mediaModel.getCarouselItem()
     carousel.appendChild(listDOM)
     totalLikes += mediaModel.likes
