@@ -4,7 +4,7 @@ function getLikes (id) {
   let numLikes = Number(carouselP.innerText)
   const heart = carouselItem.querySelector('i')
 
-  const totalLikes = document.getElementById('pPrice')
+  const totalLikes = document.getElementById('pLikes')
   let sumLikes = Number(totalLikes.innerText)
 
   if (heart.classList.contains('fa-regular')) {
