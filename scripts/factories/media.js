@@ -27,6 +27,7 @@ function mediaFactory (name, data) {
 
     const article = document.createElement('article')
     article.id = id
+    article.tabIndex = "0"
     const articleText = document.createElement('div')
     articleText.classList.add('articleText')
     const h3 = document.createElement('h3')
@@ -34,10 +35,22 @@ function mediaFactory (name, data) {
     h3.setAttribute('lang', 'en')
     const p1 = document.createElement('p')
     p1.innerHTML = likes + ' <i class="fa-regular fa-heart"></i>'
+    p1.tabIndex = '0'
     p1.addEventListener('click', () => getLikes(id))
+    p1.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        getLikes(id)
+      }
+    })
     articleText.append(h3, p1)
     article.append(elemMedia, articleText)
+    elemMedia.tabIndex = '0'
     elemMedia.addEventListener('click', () => displayLightBox(id))
+    elemMedia.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        displayLightBox(id)
+      }
+    })
     return (article)
   }
 

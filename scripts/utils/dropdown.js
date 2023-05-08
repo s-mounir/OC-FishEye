@@ -93,6 +93,25 @@ function dropdown () {
   li1.addEventListener('click', closeDropdown)
   li2.addEventListener('click', () => changeFilter(li2.textContent))
   li3.addEventListener('click', () => changeFilter(li3.textContent))
+  li1.tabIndex = '1'
+  li2.tabIndex = '1'
+  li3.tabIndex = '1'
+  li1.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      closeDropdown()
+    }
+  })
+  li2.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      changeFilter(li2.textContent)
+    }
+  })
+  li3.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      changeFilter(li3.textContent)
+    }
+  })
   ul.append(li1, li2, li3)
   mainSection.append(ul)
+  li1.focus()
 }

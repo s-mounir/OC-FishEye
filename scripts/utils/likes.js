@@ -10,11 +10,11 @@ function getLikes (id) {
   if (heart.classList.contains('fa-regular')) {
     numLikes += 1
     sumLikes += 1
-    carouselP.innerHTML = numLikes + '<i class="fa-solid fa-heart"></i>'
+    carouselP.innerHTML = numLikes + ' <i class="fa-solid fa-heart"></i>'
   } else {
     numLikes -= 1
     sumLikes -= 1
-    carouselP.innerHTML = numLikes + '<i class="fa-regular fa-heart"></i>'
+    carouselP.innerHTML = numLikes + ' <i class="fa-regular fa-heart"></i>'
   }
-  totalLikes.innerHTML = sumLikes + '<i class="fa-solid fa-heart"></i>'
+  totalLikes.innerHTML = sumLikes + '   <i class="fa-solid fa-heart"></i>'
 }
